@@ -3,6 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <!-- Inclusion de iconos para la interfaz -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <style>
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 250,
+              'GRAD' 0,
+              'opsz' 20
+            }
+        </style>
+        <!-- Estilos para la estructura de la pagina -->
         <style media="screen">
             body{
                 font-family:sans-serif;
@@ -15,17 +27,32 @@
                 padding: 1em;
                 margin:1em;
             }
+            .card{
+                border:1px solid #cbcbcb;
+                border-radius: 20px;
+                padding: 2em;
+            }
+            .card:hover{
+                border:1px solid #000000;
+                box-shadow: 6px 5px 5px #888888;
+            }
+            .contenedor-habilidades{
+                display:grid;
+                grid-template-columns: 40% 40%;
+                grid-gap: 5em
+
+            }
             .divisoria{
                 border-color:#9a9da2;
             }
             .lateral{
                 background-color:#3f4457;
                 color:#fff;
-                padding:4em 2em 3em 2em;
+                padding:2em 2em 1em 2em;
                 box-shadow: 6px 5px 5px #888888;
             }
             .principal{
-                padding: 3em 3em 5em 0em
+                padding: 3em 3em 1em 0em
             }
             .titulo{
                 font-weight:bold;
@@ -45,8 +72,34 @@
                 border: 2px solid #9a9da2;
                 width:9em;
                 height:10em;
+                background-image:url("imagen_cv.jpeg");
+                background-size:100% 130%;
+                background-position-y: -20px;
+            }
+            .foto:hover{
                 background-image:url("https://mintspace-media.fra1.digitaloceanspaces.com/wp-content/uploads/2022/04/16134231/Screenshot_2022-04-16-18-07-11-572_com.instagram.android.jpg");
                 background-size:100% 100%;
+                background-position-y: 0px;
+
+            }
+            .datos{
+                font-size: 10pt;
+            }
+            .elemento-invisible{
+                display:none;
+            }
+            .referencia{
+                padding-left: 1em;
+                line-height: 1.6;
+                margin-top: 1em;
+            }
+            .link-blanco{
+                color:white;
+            }
+            .linea{
+                background-color: #cbcbcb;
+                width: 100%;
+                height: 1px;
             }
         </style>
     </head>
@@ -58,34 +111,35 @@
                 </div>
                 <section id="Contacto">
                     <h4>Contacto</h4>
-                    <ul>
-                        <li>+595 982 593 21X</li>
-                        <li>Asuncion Paraguay</li>
-                        <li>tico.urquhart@mail.com</li>
-                    </ul>
+                    <div class="datos">
+                        <span class="material-symbols-outlined">call</span> +595 982 593 21X <br><br>
+                        <span class="material-symbols-outlined">location_on</span> Asunciṕn Paraguay <br><br>
+                        <span class="material-symbols-outlined">outgoing_mail</span> <a href="mailto:tico.urquhart@mail.com?subject=Asunto" class='link-blanco'>tico.urquhart@mail.com</a>  <br><br>
+                        <span class="material-symbols-outlined">play_lesson</span>  <a href="https://github.com/AlbertV99" class='link-blanco'>AlbertV99</a>  <br><br>
+                    </div>
                 </section>
                 <hr>
                 <section id="Educacion">
-                    <h4>Educacion</h4>
-                    <ul>
-                        <li> Escuela De las naciones 2004 - 2008</li>
-                        <li> Colegio Sagrados Corazones De Jesus y de Maria 2009 - 2014</li>
-                        <li> Colegio Tecnico Nacional de Asuncion 2015 - 2017</li>
-                        <li> Licenciatura en Ciencias Informaticas Facultad Politecnica UNA 2018 - presente</li>
-                    </ul>
+                    <h4>Educación</h4>
+                    <div class="datos">
+                        <span class="material-symbols-outlined">school</span> Escuela De las Naciones 2004 - 2008 <br><br>
+                        <span class="material-symbols-outlined">school</span> Colegio Sagrados Corazones De Jesús y de María 2009 - 2014 <br><br>
+                        <span class="material-symbols-outlined">school</span> Colegio Técnico Nacional de Asunción Bachiller Técnico en Informática 2015 - 2017 <br><br>
+                        <span class="material-symbols-outlined">school</span> Licenciatura en Ciencias Informáticas Facultad Politécnica UNA 2018 - presente <br><br>
+                    </div>
                 </section>
                 <hr>
-                <section id="Referencias">
+                <section id="referencias">
                     <h4>Referencias</h4>
-                    <div class="Referencia">
-                        <h5>Yanina Jara</h5>
-                        <span class="titulo">mail :</span> yaninajara@mail.com <br>
-                        <span class="titulo">tel :</span> +595 981 222 315 <br>
+                    <div class="referencia datos">
+                        <span class="titulo">Yanina Jara</span><br>
+                        <span class="material-symbols-outlined">outgoing_mail</span>  yaninajara@mail.com <br>
+                        <span class="material-symbols-outlined">call</span>  +595 981 222 315 <br>
                     </div>
-                    <div class="Referencia">
-                        <h5>Melinda Gimenez</h5>
-                        <span class="titulo">mail :</span> melindagimenez@mail.com <br>
-                        <span class="titulo">tel :</span> +595 987 938 320 <br>
+                    <div class="referencia datos">
+                        <span class="titulo">Melinda Gimenez</span><br>
+                        <span class="material-symbols-outlined">outgoing_mail</span>  melindagimenez@mail.com <br>
+                        <span class="material-symbols-outlined">call</span>  +595 987 938 320 <br>
                     </div>
                 </section>
             </div>
@@ -96,27 +150,48 @@
                 </div>
                 <section id="SobreMi" class="seccion-principal">
                     <h4>Sobre Mi</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Soy un desarrollador 3 años de experiencia en el área. Me caracterizo por ser perseverante ante los desafíos y buscar siempre la mejor manera de llegar a una solución. Realice varios sistemas de Gestión , desarrolle videojuegos por hobbie y organiza distintos eventos relacionados con la informática en la universidad para fomentar el interés en los compañeros.</p>
                     <hr class="divisoria">
                 </section>
                 <section id="ExperienciasLaborales" class="seccion-principal">
-                    <h4>Experiencias Laborales</h4>
+                    <h4> Experiencias Laborales</h4>
                     <h5>Valurq SRL</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>Analista y programador fullstack dentro de los proyectos realizados. </p>
                     <br>
                     <h4>Fintech Inovacion</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <hr>
+                    <p>Desarrollador encargado del mantenimiento de plataformas</p>
+                    <hr class="divisoria">
                 </section>
                 <section id="Habilidades" class="seccion-principal">
-                    <h4>Habilidades</h4>
-                    <ul>
-                        <li>Habilidad 1</li>
-                        <li>Habilidad 2</li>
-                        <li>Habilidad 3</li>
-                        <li>Habilidad 4</li>
-                        <li>Habilidad 5</li>
-                    </ul>
+                    <div class="contenedor-habilidades">
+                        <div class="card">
+                            <h4>Habilidades</h4>
+                            <div class="linea"></div>
+                            <ul>
+                                <li>Perseverante</li>
+                                <li>Honesto</li>
+                                <li>Proactivo</li>
+                                <li>Sabe trabajar en equipo</li>
+                                <li>Curioso</li>
+                            </ul>
+
+                        </div>
+                        <div class="card">
+                            <h4>Lenguajes </h4>
+                            <div class="linea"></div>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                                <li>GDscript</li>
+                                <li>C</li>
+                                <li>Java</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
                 </section>
             </div>
         </div>
